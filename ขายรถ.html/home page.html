@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ขายรถยนต์</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>Boss and Ice Garage</h1>
+        <nav>
+            <ul>
+                <li><a href="home page.html">หน้าแรก</a></li>
+                <li><a href="as.html">ของเเต่ง</a></li>
+                <li><a href="detail.html">ชำระเงิน</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>ยินดีต้อนรับสู่ Boss and Ice Garage</h2>
+        <p>เลือกรถยนต์เเละของเเต่งคุณที่ต้องการ</p>
+    </section>
+
+    <section id="cars">
+        <h2>รถยนต์ที่มีให้บริการ</h2>
+        <input type="text" id="search" placeholder="ค้นหารถยนต์..." oninput="filterCars()">
+        <div id="car-list">
+            <div class="car" data-name="Toyota Corolla">
+                <h3>Toyota Corolla</h3>
+                <img src="https://media.ed.edmunds-media.com/toyota/corolla/2023/oem/2023_toyota_corolla_sedan_xse_fq_oem_1_815.jpg" alt="Toyota Corolla">
+                <p>ราคา: 1,200,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+                
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="Honda Civic">
+                <h3>Honda Civic</h3>
+                <img src="https://image.makewebeasy.net/makeweb/m_1920x0/PcJb6GejI/DefaultData/2023_honda_civic_type_r__1_.jpg?v=202012190947" alt="Honda Civic Type R">
+                <p>ราคา: 3,990,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+                
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="Mazda 3">
+                <h3>Mazda 3</h3>
+                <img src="https://cf.autodeft2.pw/uploads/images/2021/Mazda/Mazda%203%20e-Skyactiv-G/2021-Mazda3-And-CX-30-6.jpg" alt="Mazda 3">
+                <p>ราคา: 750,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+        
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="Nissan GTR">
+                <h3>Nissan GTR</h3>
+                <img src="https://www-asia.nissan-cdn.net/content/dam/Nissan/th/news/2017-gtr/2_52A2274.jpg.ximg.l_12_h.smart.jpg" alt="Nissan GTR R34">
+                <p>ราคา: 9,500,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="lamborghini Urus">
+                <h3>Lamborghini Urus</h3>
+                <img src="https://image.makewebcdn.com/makeweb/m_1920x0/ZeRUazFMT/contentPic/Lamborghini_Urus_S_Bangkoksupercar_1.jpg?v=202405291424" alt="Lamborghini Urus">
+                <p>ราคา: 30,000,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+              
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="Toyota Supra">
+                <h3>Toyota Supra</h3>
+                <img src="https://cf.autodeft2.pw/uploads/images/Toyota-GR-Supra-Matte-White-Edition-1.jpg" alt="Toyota Supra">
+                <p>ราคา: 7,890,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+                
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="BMW M5">
+                <h3>BMW M5</h3>
+                <img src="https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/c51905b0000b639a185eeb080dd879bf007f5604/photos/3Re64RYD-8o3Q6nLfwb-(edit).jpg?t=169269654564" alt="BMW M5">
+                <p>ราคา: 7,000,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+                
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="Mercedes-Benz AMG GT">
+                <h3>Mercedes-Benz AMG GT</h3>
+                <img src="https://www.headlightmag.com/hlmwp/wp-content/uploads/2023/08/Mercedes-AMG-GT-Coupe_01.jpg" alt="Mercedes-Benz AMG GT">
+                <p>ราคา: 15,000,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+               
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="Audi R8">  
+                <h3>Audi R8</h3>
+                <img src="https://image.makewebcdn.com/makeweb/m_1920x0/ZeRUazFMT/contentPic/Audi_R8_Coup%C3%A9_V10_GT_RWD_Bangkoksupercar_6.jpeg?v=202405291424" alt="Audi R8">
+                <p>ราคา: 20,000,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+               
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+            <div class="car" data-name="Porsche 911 GTS">
+                <h3>Porsche 911 GTS</h3>
+                <img src="https://www.freep.com/gcdn/-mm-/127f63e7e3335dbe71d0ef2cd9a5d0b46a09ea76/c=0-183-3600-2217/local/-/media/2017/09/12/DetroitFreeP/DetroitFreePress/636408526950794549-GT-SILVER-CARRERA4-GTS-033.JPG?width=1320&height=746&fit=crop&format=pjpg&auto=webp" alt="Porsche 911">
+                <p>ราคา: 30,000,000 บาท</p>
+                <div class="quantity-controls"></div>
+                    <button onclick="decreaseQuantity()">-</button>
+                    <input type="text" id="quantity" value="1">
+                    <button onclick="increaseQuantity()">+</button>
+                </div>
+    
+               
+              
+                 <button class="buy-now-btn" onclick="buyNow()">ซื้อเลย</button>
+            </div>
+    
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <h2>ติดต่อเรา</h2>
+        <p>Email: info@carshop.com</p>
+        <p>โทร: 012-345-6789</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

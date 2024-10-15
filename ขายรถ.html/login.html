@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function login(event) {
+            event.preventDefault(); // ป้องกันไม่ให้ส่งฟอร์มแบบปกติ
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // ตรวจสอบ username และ password ที่ถูกต้อง (ตัวอย่างนี้ไม่เชื่อมกับฐานข้อมูล)
+            if (username === 'admin' && password === '1234') {
+                window.location.href = 'home page.html'; // เปลี่ยนหน้าไปหน้าแรก
+            } else {
+                alert('Invalid username or password');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form onsubmit="login(event)">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
